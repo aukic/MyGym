@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvBMI"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="BMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".6"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/underline"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lexendtera_regular"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBMI"
+        android:layout_marginTop="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBMIWeight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".8">
+
+            <TextView
+                android:id="@+id/tvCurrentWeight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center_vertical"
+                android:text="TEŽINA (KG):"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvCurrentWeightAmount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".5" />
+
+            <EditText
+                android:id="@+id/tvCurrentWeightAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center_vertical|start"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvCurrentWeight"
+                app:layout_constraintWidth_percent=".5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBMIHeight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clBMIWeight"
+            app:layout_constraintWidth_percent=".8">
+
+            <TextView
+                android:id="@+id/tvCurrentHeight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center_vertical"
+                android:text="VISINA (CM):"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvCurrentHeightAmount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".5" />
+
+            <EditText
+                android:id="@+id/tvCurrentHeightAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center_vertical|start"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvCurrentHeight"
+                app:layout_constraintWidth_percent=".5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBMIIndex"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clBMIHeight"
+            app:layout_constraintWidth_percent=".8">
+
+            <TextView
+                android:id="@+id/tvBMIIndex"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center_vertical"
+                android:text="BMI INDEX:"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvBMIIndexAmount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".5" />
+
+            <TextView
+                android:id="@+id/tvBMIIndexAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center_vertical|start"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvBMIIndex"
+                app:layout_constraintWidth_percent=".5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBMI"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clBMIIndex"
+            app:layout_constraintWidth_percent=".8">
+
+            <TextView
+                android:id="@+id/tvCalculateBMI"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center"
+                android:text="@string/calculate_bmi"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".6" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

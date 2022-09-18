@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tvWeight"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="@string/weight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".6"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/underline"
+        android:textColor="@color/black"
+        android:fontFamily="@font/lexendtera_regular"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clGoal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".07"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWeight"
+        app:layout_constraintWidth_percent=".55"
+        android:layout_marginTop="50dp"
+        >
+
+        <TextView
+            android:id="@+id/tvGoal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintWidth_percent=".5"
+            android:fontFamily="@font/lexendtera_regular"
+            android:gravity="center_vertical|end"
+            android:text="@string/goal"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvAmount"/>
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintWidth_percent=".5"
+            android:fontFamily="@font/lexendtera_regular"
+            android:gravity="center_vertical|start"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvGoal"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clGoal"
+        android:layout_marginTop="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clWeight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".8">
+
+            <TextView
+                android:id="@+id/tvCurrentWeight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center_vertical"
+                android:text="@string/current_weight"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvCurrentWeightAmount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".67" />
+
+            <TextView
+                android:id="@+id/tvCurrentWeightAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center_vertical|start"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvCurrentWeight"
+                app:layout_constraintWidth_percent=".33" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clLeftToGaol"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clWeight"
+            app:layout_constraintWidth_percent=".8">
+
+            <TextView
+                android:id="@+id/tvLeftToGaol"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center_vertical"
+                android:text="@string/reach_goal"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/tvLeftToGaolAmount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".7" />
+
+            <TextView
+                android:id="@+id/tvLeftToGaolAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center_vertical|start"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvLeftToGaol"
+                app:layout_constraintWidth_percent=".3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clBMI"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clLeftToGaol"
+            app:layout_constraintWidth_percent=".8">
+
+            <TextView
+                android:id="@+id/tvCalculateBMI"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lexendtera_regular"
+                android:gravity="center"
+                android:text="@string/calculate_bmi"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".6" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

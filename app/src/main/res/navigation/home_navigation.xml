@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/dietFragment"
+        android:name="ferit.project.mygym.ui.DietFragment"
+        android:label="fragment_diet"
+        tools:layout="@layout/fragment_diet" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ferit.project.mygym.ui.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_dietFragment"
+            app:destination="@id/dietFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_trainingFragment"
+            app:destination="@id/trainingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_weightFragment"
+            app:destination="@id/weightFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingFragment"
+        android:name="ferit.project.mygym.ui.training.TrainingFragment"
+        android:label="TrainingFragment" >
+        <action
+            android:id="@+id/action_trainingFragment_to_datePickerFragment"
+            app:destination="@id/datePickerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTrainingFragment"
+        android:name="ferit.project.mygym.ui.newtraining.NewTrainingFragment"
+        android:label="NewTrainingFragment" >
+        <argument
+            android:name="date"
+            app:argType="java.util.Date" />
+        <action
+            android:id="@+id/action_newTrainingFragment_to_trainingFragment"
+            app:destination="@id/trainingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weightFragment"
+        android:name="ferit.project.mygym.ui.WeightFragment"
+        android:label="WeightFragment" >
+        <action
+            android:id="@+id/action_weightFragment_to_calculateBMIFragment"
+            app:destination="@id/calculateBMIFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculateBMIFragment"
+        android:name="ferit.project.mygym.ui.CalculateBMIFragment"
+        android:label="CalculateBMIFragment" />
+    <fragment
+        android:id="@+id/datePickerFragment"
+        android:name="ferit.project.mygym.ui.DatePickerFragment"
+        android:label="DatePickerFragment" >
+        <action
+            android:id="@+id/action_datePickerFragment_to_newTrainingFragment"
+            app:destination="@id/newTrainingFragment" />
+    </fragment>
+</navigation>
